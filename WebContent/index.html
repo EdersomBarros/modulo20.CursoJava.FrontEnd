@@ -9,26 +9,25 @@ body {
 <meta charset="ISO-8859-1">
 <title>Formulário</title>
 </head>
-<style></style>
 <body>
 	<!-- Mini Curso Front End -->
-	<form action="" >
-		<table style= "background: #E6E6FA;">
+	<form action="">
+		<table style="background: #E6E6FA;">
 			<tr>
 				<td><label>Nome:</label></td>
 				<td><input type="text" id="nome" name="nome"
-					style="border-radius: 5px"></td>
+					style="border-radius: 5px" onclick="validarDados()"></td>
 			</tr>
 			<tr>
 				<td><label>Login:</label></td>
 				<td><input type="text" id="Login" name="login"
-					style="border-radius: 5px"></td>
+					style="border-radius: 5px" onclick="validarDados()"></td>
 			</tr>
 
 			<tr>
 				<td><label>Senha:</label></td>
 				<td><input type="password" id="senha" name="senha"
-					style="border-radius: 5px"></td>
+					style="border-radius: 5px" onclick="validarDados()"></td>
 			</tr>
 			<tr>
 				<td />
@@ -37,5 +36,24 @@ body {
 			</tr>
 		</table>
 	</form>
+	<script type="text/javascript">
+		function validarDados() {
+
+			var nome = document.getElementById("nome").value;
+			if (nome == '') {
+				alert('Informe o nome!')
+			}
+			
+			var login = document.getElementById("login").value;
+			if (nome == '') {
+				alert('Informe o login!')
+			}
+			var senha = document.getElementById("senha").value;
+			if (nome == '') {
+				alert('Informe a senha!')
+			}
+			
+		}
+	</script>
 </body>
 </html>
